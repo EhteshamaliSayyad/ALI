@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Account</title>
+  <style>
+    *{
+            text-decoration: none;
+        }
+        .navbar{
+            background: rgb(0, 0, 0); 
+            font-family: calibri; 
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-bottom: 3%;
+            padding-top: 1%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .navdiv{
+            display: flex; 
+            align-items: center; 
+            justify-content: space-between;
+        }
+        .logo a{
+            font-size: 35px; 
+            font-weight: 600; 
+            color: rgb(55, 0, 255, 0.678);
+        }
+        li{
+            list-style: none; 
+            display: inline-block;
+        }
+        #id4{
+            color: rgb(250, 250, 250); 
+            font-size: 20px; 
+            font-weight: bold; 
+            margin-right: 25px; 
+            margin-top: 10px;
+            margin-left: 3px;
+        }
+        #id1{
+            background-color: rgb(55, 0, 255, 0.678); 
+            border-radius: 10px; 
+            padding: 10px; 
+            width: 90px;
+        }
+        #id2{
+            background-color: rgb(55, 0, 255, 0.678); 
+            border-radius: 10px; 
+            padding: 10px; 
+            width: 90px;
+        }
+        #id3{
+            color: rgb(250, 250, 250); 
+            font-size: 20px; 
+            font-weight: bold; 
+            margin-right: 7px; 
+            margin-top: 10px;
+            margin-left: 10px;
+
+        }
+        button a{
+            color: rgb(0, 0, 0); 
+            font-weight: bold; 
+            font-size: 15px;
+        }
+        .products{
+            margin-left: 1%; 
+            padding-left: 20px; 
+            padding-right: 20px;
+
+        }
+        .search-bar {
+            flex-grow: 1; 
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .search-bar input[type="text"] {
+            padding: 10px;
+            border: 2px solid rgb(55, 0, 255, 0.678);
+            border-radius: 20px;
+            outline: none;
+            width: 700px;
+            font-size: 16px;
+            margin-right: 10px;
+            margin-left: 25%;
+        }
+        .search-bar button {
+            background-color: rgb(55, 0, 255, 0.678);
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        .search-bar button:hover {
+            background-color: rgb(55, 0, 255, 0.678);
+        }
+        .scroll-container {
+            height: 100vh; /* Set height of container to full viewport height */
+            overflow-y: scroll; /* Add vertical scrollbar */
+        }
+        /* Thin scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: rgb(206, 206, 203);
+            border-radius: 5px;
+        }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: white;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    form {
+      margin-top: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      color: #666;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: calc(100% - 12px);
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+
+    .error {
+      color: red;
+      font-size: 0.8em;
+    }
+
+    button[type="submit"] {
+      background-color: #000000;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #45a049;
+    }
+
+    /* Additional Styles for Visual Appeal */
+    .container {
+      box-sizing: border-box;
+      padding: 40px;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    button[type="submit"] {
+      font-size: 16px;
+    }
+
+    button[type="submit"] {
+      transition: background-color 0.3s ease;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #4CAF50;
+    }
+
+    .error {
+      margin-top: 5px;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+    <nav class="navbar col-lg-12">
+          <div class="navdiv">
+              <div class="logo"><a href="#">SNAPSHOP</a> </div>
+              <div class="search-bar">
+                  <input type="text" placeholder="Search...">
+                  <button>Search</button>
+              </div>
+              <ul>
+                  <li><a href="index.html" id ="id3">HOME</a></li>
+                  <li><a href="#" id="id4">CART</a></li>
+                  <button id="id1"><a href="signin.html">SignIn</a></button>
+                  <button id="id2"><a href="signup.html">SignUp</a></button>
+              </ul>
+          </div>
+      </nav>
+  <div class="container">
+    <h2>Create Account</h2>
+    <form id="createAccountForm">
+      <div>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <span class="error" id="usernameError"></span>
+      </div>
+      <div>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <span class="error" id="passwordError"></span>
+      </div>
+      <div>
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" required>
+        <span class="error" id="confirmPasswordError"></span>
+      </div>
+      <button type="submit">Create Account</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('createAccountForm').addEventListener('submit', function(event) {
+      var username = document.getElementById('username').value;
+      var password = document.getElementById('password').value;
+      var confirmPassword = document.getElementById('confirmPassword').value;
+
+      var usernameError = document.getElementById('usernameError');
+      var passwordError = document.getElementById('passwordError');
+      var confirmPasswordError = document.getElementById('confirmPasswordError');
+
+      usernameError.textContent = '';
+      passwordError.textContent = '';
+      confirmPasswordError.textContent = '';
+
+      if (username.length < 4) {
+        event.preventDefault();
+        usernameError.textContent = 'Username must be at least 4 characters long.';
+      }
+
+      if (password.length < 8) {
+        event.preventDefault();
+        passwordError.textContent = 'Password must be at least 8 characters long.';
+      }
+
+      if (password !== confirmPassword) {
+        event.preventDefault();
+        confirmPasswordError.textContent = 'Passwords do not match.';
+      }
+
+      // If form is valid, redirect to index.html
+      if (username.length >= 4 && password.length >= 8 && password === confirmPassword) {
+        window.location.href = 'index.html'; // Change 'index.html' to the desired destination
+        event.preventDefault(); // Prevent form submission
+      }
+    });
+  </script>
+</body>
+</html>
