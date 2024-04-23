@@ -1,89 +1,251 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <style>
-        a{
-            margin-left: 50px;
-            font-size: larger;
-            color: rgba(241, 241, 241, 0.93);
-            margin-top: 100 0%;
-            text-decoration: none;  
-          
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SNAPSHOP</title>
+    <style type="text/css">
+        *{
+            text-decoration: none;
         }
-        body{
-            background-image: url(wallpaperflare.com_wallpaper\ \(4\).jpg);
+        .navbar{
+            background: rgb(0, 0, 0); 
+            font-family: calibri; 
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-bottom: 3%;
+            padding-top: 1%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .navdiv{
+            display: flex; 
+            align-items: center; 
+            justify-content: space-between;
+        }
+        .logo a{
+            font-size: 35px; 
+            font-weight: 600; 
+            color: rgba(55, 0, 255, 0.678);
+        }
+        li{
+            list-style: none; 
+            display: inline-block;
+        }
+        #id4{
+            color: rgb(250, 250, 250); 
+            font-size: 20px; 
+            font-weight: bold; 
+            margin-right: 25px; 
+            margin-top: 10px;
+            margin-left: 3px;
+        }
+        #id1{
+            background-color: rgba(55, 0, 255, 0.678); 
+            border-radius: 10px; 
+            padding: 10px; 
+            width: 90px;
+        }
+        #id2{
+            background-color: rgb(55, 0, 255, 0.678); 
+            border-radius: 10px; 
+            padding: 10px; 
+            width: 90px;
+        }
+        #id3{
+            color: rgb(250, 250, 250); 
+            font-size: 20px; 
+            font-weight: bold; 
+            margin-right: 7px; 
+            margin-top: 10px;
+            margin-left: 30px;
 
-        background-color:rgb(0, 0, 0)
+        }
+        button a{
+            color: rgb(0, 0, 0); 
+            font-weight: bold; 
+            font-size: 15px;
+        }
+        .products{
+            margin-left: 1%; 
+            padding-left: 20px; 
+            padding-right: 20px;
+
+        }
+        .search-bar {
+            flex-grow: 1; 
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .search-bar input[type="text"] {
+            padding: 10px;
+            border: 2px solid rgb(55, 0, 255, 0.678);
+            border-radius: 20px;
+            outline: none;
+            width: 750px;
+            font-size: 16px;
+            margin-right: 10px;
+            margin-left: 25%;
+        }
+        .search-bar button {
+            background-color: rgb55, 0, 255, 0.678);
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        .search-bar button:hover {
+            background-color: rgb(55, 0, 255, 0.678);
+        }
+        .scroll-container {
+            height: 100vh; /* Set height of container to full viewport height */
+            overflow-y: scroll; /* Add vertical scrollbar */
+        }
+        /* Thin scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
         
+        ::-webkit-scrollbar-thumb {
+            background: rgb(206, 206, 203);
+            border-radius: 5px;
         }
-        .navigation{    
-            text-align:center;
-            background-color: rgba(49, 28, 1, 0.164);
-            background-image: url(wallpaperflare.com_wallpaper\ \(4\).jpg);
-
-        }
-        .content
-        {
-            text-decoration-color: rgb(255, 254, 251);
-            margin-left: 5%;
-        }
-        .content{
-            color: rgb(238, 236, 233);
-        }
-        div{
-border:2px solid rgb(4, 1, 7)
-
-    }
- 
-
-        
     </style>
-    
-        
 </head>
-<body>
+<body style="background-color: rgb(238, 242, 237);">
+    <nav class="navbar col-lg-12">
+        <div class="navdiv">
+            <div class="logo"><a href="#">ECOM</a> </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+                <button>Search</button>
+            </div>
+            <ul>
+                <li><a href="index.html" id ="id3">HOME</a></li>
+                <li><a href="#" id="id4">CART</a></li>
+                <button id="id1"><a href="signin.html">SignIn</a></button>
+                <button id="id2"><a href="signup.html">SignUp</a></button>
+            </ul>
+        </div>
+    </nav>
     
-    
-    <div class="navigation">
-        
-        <!-- <img src="C:\Users\ehtes\OneDrive\Desktop\WhatsApp Image 2023-12-20 at 15.18.04_be245bb3.jpg" style="height: 8%;width: 8%;" > -->
-    
-   <a href="website.html">home </a>
-   <a href="internship.html " id="1" > internships</a>
-   <a href="#ali">project </a>
-   <a href="search"> <label for="" >search</label><input type="text" name="change" id="change"> </a>
-   <a href="ACHIVEMENT.HTML">achievments</a>
-
-   <a href="">skills </a>
-   <a href="">contact </select></a>
-   
-</div>
-<br>
-<br>
-<div class="content">
-    <div class="row">
-        <div class="col-lg-3 col-sm-6   "   ><h1>GTR</h1><img src="C:\Users\ehtes\Downloads\wallpaperflare.com_wallpaper (21).jpg" style="width: 100%;"></div>
-        <div class="col-lg-3 col-sm-6   "   ><h1>BATMAN</h1><img src="C:\Users\ehtes\Downloads\wallpaperflare.com_wallpaper (17).jpg" style="width: 100%;"></div>
-        <div class="col-lg-3 col-sm-6   "   ><h1>BATMOBILE</h1><img src="C:\Users\ehtes\Downloads\wallpaperflare.com_wallpaper (16).jpg"style="width: 100%;"></div>
-       
-        <div class="col-lg-3 col-sm-6   "   ><h1>ILLUMINATI</h1> <img src="C:\Users\ehtes\OneDrive\Desktop\s-l1200.jpg" style="width: 105%;"style="width: 100%;"></div>
-<h1>WELCOME !</h1>
-<h2 >My Name is <SPAn style="color: rgb(255, 145, 2);font-family: 'Times New Roman', Times, serif;">EHTESHAM ALI SAYYAD</SPAn>. Im a front end developer based in pune india  </h2>
-
-
-</div>  
-<script>
-    document.getElementById("change").addEventListener('input',function(){
-        var inputvar=document.getElementById('change').value;
-        document.getElementById('content').innerHTML=inputvar;
-
-    
-    })
-
-
+    <div class="products row">
+        <div class="col-sm-3" >
+			<div class="shad shadow-none p-1 mb-2 bg-light rounded margin-left 3%">
+                <img src="C:\Users\Kabir\Downloads\cap.jpg" alt="JEANS" 
+                width="200" height="200" 
+                style="min-width: 100px; min-height: 100px;">
+           <br>
+		<button style="margin:2% ; margin-left: 112px;">VIEW</button>
+		</div>
+			</div>
+		<div class="col-sm-3 ">
+			<div class="shad shadow-none p-1 mb-2 bg-light rounded">
+                <img src="C:\Users\Kabir\Downloads\bag.jpg" alt="Description of image" 
+                width="200" height="200" 
+                style="min-width: 100px; min-height: 100px;">
+           <br>
+		<button style="margin:2% ;margin-left: 112px" >VIEW</button>
+		</div>
+		</div>
+		<div class ="col-sm-3 ">
+			<div class="shadow-none p-1 mb-2 bg-light rounded">
+                <img src="C:\Users\Kabir\Downloads\laptop.jpg" alt="Description of image" 
+                width="200" height="200" 
+                style="min-width: 100px; min-height: 100px;">
+           <br>
+		<button  style="margin:2% ;margin-left: 112px">VIEW</button>
+		</div>
+		</div>
+		<div class="col-sm-3 ">
+			<div class="shadow-none p-1 mb-2 bg-light rounded">
+                <img src="C:\Users\Kabir\Downloads\lamp.jpg" alt="Description of image" 
+                width="200" height="200" 
+                style="min-width: 100px; min-height: 100px;">
+           <br>
+		<button style="margin:2%;margin-left: 112px">VIEW</button>
+		</div>
+		</div>
+        <div class ="col-sm-3 ">
+			<div class="shadow-none p-1 mb-2 bg-light rounded">
+                <img src="C:\Users\Kabir\Downloads\cables.jpg" alt="Description of image" 
+                width="200" height="200" 
+                style="min-width: 100px; min-height: 100px;">
+           <br>
+		<button  style="margin:2% ;margin-left: 112px">VIEW</button>
+		</div>
+		</div>
+        <div class ="col-sm-3 ">
+			<div class="shadow-none p-1 mb-2 bg-light rounded">
+                <img src="C:\Users\Kabir\Downloads\shampoo.jpg" alt="Description of image" 
+                width="200" height="200" 
+                style="min-width: 100px; min-height: 100px;">
+           <br>
+		<button  style="margin:2% ;margin-left: 112px">VIEW</button>
+		</div>
+		</div>
+        <div class ="col-sm-3 ">
+			<div class="shadow-none p-1 mb-2 bg-light rounded">
+                <img src="C:\Users\Kabir\Downloads\tissue.jpg" alt="Description of image" 
+                width="200" height="200" 
+                style="min-width: 100px; min-height: 100px;">
+           <br>
+		<button  style="margin:2% ;margin-left: 112px">VIEW</button>
+		</div>
+		</div>
+        <div class ="col-sm-3 ">
+			<div class="shadow-none p-1 mb-2 bg-light rounded">
+                <img src="C:\Users\Kabir\Downloads\car duster.jpg" alt="Description of image" 
+                width="200" height="200" 
+                style="min-width: 100px; min-height: 100px;">
+           <br>
+		<button  style="margin:2% ;margin-left: 112px">VIEW</button>
+		</div>
+		</div>
+        <div class ="col-sm-3 ">
+			<div class="shadow-none p-1 mb-2 bg-light rounded">
+                <img src="C:\Users\Kabir\Downloads\blue shirt.jpg" alt="Description of image" 
+                width="200" height="200" 
+                style="min-width: 100px; min-height: 100px;">
+           <br>
+		<button  style="margin:2% ;margin-left: 112px">VIEW</button>
+		</div>
+		</div>
+        <div class ="col-sm-3 ">
+			<div class="shadow-none p-1 mb-2 bg-light rounded">
+                <img src="C:\Users\Kabir\Downloads\car wash.jpg" alt="Description of image" 
+                width="200" height="200" 
+                style="min-width: 100px; min-height: 100px;">
+           <br>
+		<button  style="margin:2% ;margin-left: 112px">VIEW</button>
+		</div>
+		</div>
+        <div class ="col-sm-3 ">
+			<div class="shadow-none p-1 mb-2 bg-light rounded">
+                <img src="C:\Users\Kabir\Downloads\stand.jpg" alt="Description of image" 
+                width="200" height="200" 
+                style="min-width: 100px; min-height: 100px;">
+           <br>
+		<button  style="margin:2% ;margin-left: 112px">VIEW</button>
+		</div>
+		</div>
+        <div class ="col-sm-3 ">
+			<div class="shadow-none p-1 mb-2 bg-light rounded">
+                <img src="C:\Users\Kabir\Downloads\pants.jpg" alt="Description of image" 
+                width="200" height="200" 
+                style="min-width: 100px; min-height: 100px;">
+           <br>
+		<button  style="margin:2% ;margin-left: 112px">VIEW</button>
+		</div>
+		</div>
+	</div>
+    </div>
 </body>
 </html>
